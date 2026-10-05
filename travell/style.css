@@ -1,0 +1,71 @@
+		*{
+ margin : 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+body {
+	margin: 10px;
+    background-color: whitesmoke;
+	margin-top: 50px;
+	font-family: serif;
+	font-size: 16px;
+	line-height: 1.5;
+	margin-right: 300px;
+	margin-left: 50px;
+}
+
+.special {
+	font-family: monospace;
+}
+
+img {
+	width: 300px;
+}
+
+a {
+	font-family: sans-serif;
+	color: black;
+	text-decoration: none;
+}
+
+a:visited {
+	color: black;
+}
+
+a:hover {
+	color: deepskyblue;
+}
+
+ul {
+	list-style: none;
+	font-size: 1rem;
+}
+
+.list-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 50px 10px;
+}
+
+.list-group {
+  list-style: none;   /* 기본 점(•) 없애고 싶으면 */
+  padding: 0;
+  margin: 0;
+  flex: 1 1 250px;             /* 3개 그룹이 균등한 너비를 가지도록 */
+}
+
+@media screen and (max-width: 704px) {
+
+body {
+	margin: 10px;
+    background-color: whitesmoke;
+	margin-top: 50px;
+	font-family: serif;
+	font-size: 16px;
+	line-height: 1.5;
+	margin-right: 50px;
+	margin-left: 50px;
+}
+
+}

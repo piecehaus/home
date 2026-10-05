@@ -1,0 +1,17 @@
+		*{
+ margin : 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+body {
+    margin: 20px;
+}
+
+img {
+	height: 500px;
+}
+
+@media screen and (max-width: 704px) {
+
+}

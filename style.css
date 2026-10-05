@@ -1,0 +1,219 @@
+		*{
+ margin : 5px;
+ padding: ;
+ box-sizing: border-box;
+}
+
+
+/*body {
+	margin: 10px;
+	background-image: url(https://d2w9rnfcy7mm78.cloudfront.net/43743096/original_2ddef964201ff02d4989aadf4e91c383.png?1771513251?bc=0);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-color: white;
+}*/
+
+
+/*
+body {
+	margin: 10px;
+	background-image: url(https://d2w9rnfcy7mm78.cloudfront.net/43741894/original_1534dfa09a6f0dc254838c9192695fe9.png?1771511199?bc=0);
+	background-size: 100%;
+	background-position-x: 10%;
+	background-position-y: 10%;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-color: white;
+}
+*/
+
+video {
+	width: 200px;
+	position: absolute;
+	top: 100px;
+	left: 550px;
+}
+
+body {
+	margin: 10px;
+	background-image: url(https://d2w9rnfcy7mm78.cloudfront.net/48191974/original_0ab86f3501306115a4a52a6ab7852ecc.jpeg?1784880675?bc=0);
+	background-size: 800px;
+	background-position-x: 50px;
+	background-position-y: 0px;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-color: white;
+}
+
+
+.icon{
+	width: 100px;
+}
+
+img{
+	width: 300px;
+	margin-bottom: 100px;
+	margin-left: 150px;
+	display: block;
+}
+
+.text{
+	margin-top: 550px;
+}
+
+.last {
+	position: absolute;
+	top: 600px;
+	font-size: 13px;
+	line-height: 1;
+}
+
+p {
+	color: black;
+	text-decoration: none;
+	font-family: monospace;
+	font-size: 15px;
+	line-height: 1.5;
+	display: inline;
+	top: 100px;
+}
+
+.green {
+	color: black;
+	background-color: lightgreen;
+	display: block;
+/*.
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	*/
+}
+
+.red {
+	color: black;
+	/*display: block;*/
+	background-color: orangered;
+}
+
+.blue {
+	color: black;
+	/*display: block;*/
+	background-color: skyblue;
+}
+
+.yellow {
+	color: black;
+	/*display: block;*/
+	background-color: #EDFF4D;
+}
+
+.white {
+	color: black;
+	/*display: block;*/
+	background-color: pink;
+}
+
+.color1 {
+	color: black;
+	/*display: block;*/
+	background-color: royalblue;
+}
+
+.color2 {
+	color: black;
+	/*display: block;*/
+	background-color: powderblue;
+}
+
+.color3 {
+	color: black;
+	/*display: block;*/
+	background-color: sandybrown;
+}
+
+a {
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+	color: white;
+}
+
+.black:hover {
+	background-color: black;
+	color: white;
+}
+
+
+
+@media screen and (max-width: 700px) {
+
+
+video {
+	width: 300px;
+}
+
+img{
+	bottom: 100px;
+}
+
+p {
+	color: black;
+	text-decoration: none;
+	font-family: monospace;
+	font-size: 15px;
+	line-height: 1.5;
+	display: inline;
+	top: 100px;
+}
+
+body {
+	margin: 10px;
+	background-image: url(https://d2w9rnfcy7mm78.cloudfront.net/48191974/original_0ab86f3501306115a4a52a6ab7852ecc.jpeg?1784880675?bc=0);
+	background-size: 900px;
+	background-position-x: -10px;
+	background-position-y: 200px;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-color: white;
+}
+
+
+.green {
+	color: black;
+	background-color: lightgreen;
+/*.
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	*/
+}
+
+.red {
+	color: black;
+	background-color: orangered;
+}
+
+.blue {
+	color: black;
+	background-color: skyblue;
+}
+
+.yellow {
+	color: black;
+	background-color: #EDFF4D;
+}
+
+.pink {
+	color: black;
+	background-color: pink;
+}
+
+}

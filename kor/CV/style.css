@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: "Avenir";
+  font-size: 15pt;
+  color: black;
+  line-height: 1.5;
+  text-align: left;
+  /*.
+  background-image: url("https://d2w9rnfcy7mm78.cloudfront.net/43741894/original_1534dfa09a6f0dc254838c9192695fe9.png?1771511199?bc=0");
+  background-size: cover;
+  background-repeat: no-repeat;
+  */
+}
+
+h1 {
+  margin-left: 30px;
+  margin-top: 33px;
+  color: black;
+  text-decoration: underline;
+  font-size: 45px;
+  line-height: 1;
+  display: inline;
+  position: absolute;
+}
+
+p {
+  margin-top: 10px;
+}
+
+/*.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 100;
+}
+
+*/
+
+.bg-video__content {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.p2 {
+  text-align: center;
+  font-size: 14px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.white {
+  color: transparent;
+}
+
+.wrapper {
+    display: grid; /*.grid였음*/
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    right: 0px;
+    bottom: 20px;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 10px;
+    padding: 0 20px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  margin-top: 20px;
+  margin-left: 0px;
+  margin-right: 10px;
+  text-align: left;;
+}
+
+td {
+  border-bottom: 0.5px solid black;
+  border-collapse: collapse;
+  padding: 2px;
+  font-size: 14px;
+  padding-left: 10px;
+  background-color: white;
+}
+
+th {
+  padding-left: 10px;
+  line-height: 25px;
+  font-weight: bold;
+  text-decoration: underline;
+  color: black;
+
+  background-color: transparent;
+}
+
+li {
+  margin-left: 20px;
+}
+
+img {
+  margin: 50px;
+  width: 250px;
+}
+
+a {
+  text-decoration: none;
+  color: deepskyblue;
+}
+
+a:visited {
+  color: deepskyblue;
+}
+
+td:hover {
+  background-color: DeepSkyBlue;
+  color: black;
+}
+
+.smalltalk {
+  text-align: right;
+  font-size: 18px;
+  text-decoration: underline;
+  font-weight: bold;
+  margin-top: 80px;
+}
+
+.click:hover {
+  background-color: DeepSkyBlue;
+  color: white;
+}
+
+#info {
+  margin-top: 218px;
+}
+
+@media screen and (max-width: 700px) {
+
+  .wrapper {
+    display: grid; /*.grid였음*/
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    right: 0px;
+    bottom: 20px;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 0 20px;
+}
+
+}
