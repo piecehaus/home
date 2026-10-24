@@ -5,7 +5,7 @@
 	/* 스케치북 줄 띠의 높이 (이미지가 너무 작거나 크게 보이면 이 숫자를 바꾸세요) */
 	--strip-h: 70px;
 	/* 모바일: 왼쪽 메뉴 칸 너비 = 나누는 선의 위치 (스프링 오른쪽에 오도록 이 숫자를 조절하세요) */
-	--split: 120px;
+	--split: 110px;
 }
 
 * {
@@ -119,7 +119,7 @@ a:hover {
 		background-color: white;
 		background-image: url(https://d2w9rnfcy7mm78.cloudfront.net/51794455/original_5a66d9c5747e834823ba5f18daa54228.jpg?1792813679?bc=0);
 		background-size: 500px;
-		background-position-x: 70px;
+		background-position-x: 60px;
 		background-position-y: 0px;
 		background-repeat: no-repeat;
 		background-attachment: fixed;
