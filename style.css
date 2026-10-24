@@ -62,6 +62,8 @@ body {
 	flex: 1 1 auto;
 	min-height: 0;                    /* 이게 있어야 칸 안에서만 스크롤됨 */
 	border-top: 1px solid black;
+	/*background-image: radial-gradient(lightgray 0.5px, transparent 4px);
+	background-size: 50px 50px;*/
 }
 
 .viewer iframe {
@@ -152,7 +154,8 @@ a:hover {
 		grid-row: 1;
 		min-height: 0;
 		border-top: 0;
-		border-left: 1px solid black;  /* 나누는 선 */
+		border-left: 1px solid black;  /* 나누는 선 */;
+		background: transparent;
 	}
 
 	.contact {
