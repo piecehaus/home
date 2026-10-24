@@ -7,6 +7,7 @@
 body {
     margin: 20px;
     background-color: hotpink;
+    font-family: sans-serif;
 }
 
 img {
@@ -58,7 +59,8 @@ a:hover {
 
 
 .description {
-	color: #FCE4EC;
+	color: pink;
+	background-color: ;
 }
 
 .photo {

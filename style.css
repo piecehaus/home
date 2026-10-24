@@ -1,149 +1,92 @@
-		*{
- margin : 5px;
- padding: ;
- box-sizing: border-box;
+/* ===== 값만 바꾸면 되는 설정 ===== */
+:root {
+	/* 스케치북 줄 이미지 */
+	--strip: url("https://d2w9rnfcy7mm78.cloudfront.net/51794720/original_91f4bd67c7682811bcc704f6160810aa.jpg?1792815038?bc=0");
+	/* 스케치북 줄 띠의 높이 (이미지가 너무 작거나 크게 보이면 이 숫자를 바꾸세요) */
+	--strip-h: 70px;
+	/* 모바일: 왼쪽 메뉴 칸 너비 = 나누는 선의 위치 (스프링 오른쪽에 오도록 이 숫자를 조절하세요) */
+	--split: 150px;
 }
 
-
-/*body {
-	margin: 10px;
-	background-image: url(https://d2w9rnfcy7mm78.cloudfront.net/43743096/original_2ddef964201ff02d4989aadf4e91c383.png?1771513251?bc=0);
-	background-size: 100%;
-	background-repeat: no-repeat;
-	background-attachment: scroll;
-	background-color: white;
-}*/
-
-
-/*
-body {
-	margin: 10px;
-	background-image: url(https://d2w9rnfcy7mm78.cloudfront.net/43741894/original_1534dfa09a6f0dc254838c9192695fe9.png?1771511199?bc=0);
-	background-size: 100%;
-	background-position-x: 10%;
-	background-position-y: 10%;
-	background-repeat: no-repeat;
-	background-attachment: scroll;
-	background-color: white;
-}
-*/
-
-video {
-	width: 200px;
-	position: absolute;
-	top: 100px;
-	left: 550px;
+* {
+	box-sizing: border-box;
 }
 
-body {
-/*	margin: 10px;
-	background-image: url(https://d2w9rnfcy7mm78.cloudfront.net/48191974/original_0ab86f3501306115a4a52a6ab7852ecc.jpeg?1784880675?bc=0);
-	background-size: 800px;
-	background-position-x: 50px;
-	background-position-y: 0px;*/
-	/*background-repeat: no-repeat;*/
-	background-attachment: scroll;
+html, body {
 	margin: 0;
-	min-height: 100vh;
-	background-color: white;
-	background-image: radial-gradient(lightgray 0.5px, transparent 5px);
-	background-size: 50px 50px;
+	padding: 0;
 }
 
-
-.icon{
-	width: 100px;
+/* 화면 전체를 위 → 아래로 쌓고, viewer 칸이 남는 높이를 전부 차지 */
+body {
+	height: 100vh;
+	height: 100dvh;
+	display: flex;
+	flex-direction: column;
+	background: white;
+	font-family: sans-serif;
+	overflow: hidden;
 }
 
-img{
-	width: 300px;
-	margin-bottom: 100px;
-	margin-left: 150px;
-	display: block;
+/* 1. 스케치북 줄: 가로로 반복해서 화면 끝까지 이어 붙임 */
+.strip {
+	flex: 0 0 var(--strip-h);
+	width: 100%;
+	background-image: var(--strip);
+	background-repeat: repeat-x;      /* 끊기지 않고 옆으로 계속 이어짐 */
+	background-size: auto 100%;       /* 높이는 띠에 맞추고, 가로는 비율대로 */
+	background-position: left top;
 }
 
-.text{
-	margin-top: 550px;
+/* 2. 메뉴 줄 */
+.menu {
+	flex: 0 0 auto;
+	display: flex;
+	flex-wrap: wrap;                  /* 화면이 좁으면 다음 줄로 */
+	align-items: center;
+	gap: 6px 14px;
+	padding: 10px 12px;
 }
 
-.last {
-	position: absolute;
-	top: 600px;
-	font-size: 13px;
-	line-height: 1;
-}
-
-p {
+.menu p {
+	margin: 0;
 	color: black;
 	text-decoration: none;
 	font-family: sans-serif;
 	font-size: 15px;
 	line-height: 1.8;
-	display: inline;
-	top: 100px;
 }
 
-.green {
-	color: black;
-	background-color: lightgreen;
+/* 3. 내용 칸 */
+.viewer {
+	flex: 1 1 auto;
+	min-height: 0;                    /* 이게 있어야 칸 안에서만 스크롤됨 */
+	border-top: 1px solid black;
+}
+
+.viewer iframe {
 	display: block;
-/*.
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	*/
+	width: 100%;
+	height: 100%;
+	border: 0;
 }
 
-.red {
-	color: black;
-	/*display: block;*/
-	background-color: orangered;
+/* 4. contact */
+.contact {
+	flex: 0 0 auto;
+	padding: 8px 12px;
+	font-size: 13px;
+	line-height: 1.4;
+	border-top: 1px solid #ddd;
 }
 
-.blue {
-	color: black;
-	/*display: block;*/
-	background-color: skyblue;
-}
-
-.yellow {
-	color: black;
-	/*display: block;*/
-	background-color: #EDFF4D;
-}
-
-.white {
-	color: black;
-	/*display: block;*/
-	background-color: pink;
-}
-
-
-.color1 {
-	color: black;
-	/*display: block;*/
-	background-color: royalblue;
-}
-
-.color2 {
-	color: black;
-	/*display: block;*/
-	background-color: powderblue;
-}
-
-.color3 {
-	color: black;
-	/*display: block;*/
-	background-color: sandybrown;
-}
-
+/* ===== 링크 ===== */
 a {
-  color: black;
+	color: black;
 }
 
 a:visited {
-  color: black;
+	color: black;
 }
 
 a:hover {
@@ -155,70 +98,67 @@ a:hover {
 	color: white;
 }
 
+/* ===== 메뉴 색깔 ===== */
+.green  { color: black; background-color: lightgreen; }
+.red    { color: black; background-color: orangered; }
+.blue   { color: black; background-color: skyblue; }
+.yellow { color: black; background-color: #EDFF4D; }
+.white  { color: black; background-color: pink; }
+.pink   { color: black; background-color: pink; }
+.color1 { color: black; background-color: royalblue; }
+.color2 { color: black; background-color: powderblue; }
+.color3 { color: black; background-color: sandybrown; }
 
-
+/* ===== 모바일 ===== */
 @media screen and (max-width: 700px) {
 
+	/* 집 모양 그림을 예전 설정 그대로 배경에 */
+	body {
+		background-color: white;
+		background-image: url(https://d2w9rnfcy7mm78.cloudfront.net/51794455/original_5a66d9c5747e834823ba5f18daa54228.jpg?1792813679?bc=0);
+		background-size: 500px;
+		background-position-x: 100px;
+		background-position-y: 0px;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
 
-video {
-	width: 300px;
-}
+		/* 왼쪽(메뉴) / 오른쪽(내용)으로 분할, 맨 아래는 contact */
+		display: grid;
+		grid-template-columns: var(--split) 1fr;
+		grid-template-rows: 1fr auto;
+	}
 
-img{
-	bottom: 100px;
-}
+	/* 모바일에서는 스케치북 줄 띠 대신 집 그림을 쓰므로 숨김 */
+	.strip {
+		display: none;
+	}
 
-p {
-	color: black;
-	text-decoration: none;
-	font-family: sans-serif;
-	font-size: 15px;
-	line-height: 1.5;
-	display: inline;
-	top: 100px;
-}
+	/* 왼쪽: 메뉴가 세로로 쭉 */
+	.menu {
+		grid-column: 1;
+		grid-row: 1;
+		min-height: 0;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		align-items: flex-start;       /* 색 배경이 글자 크기만큼만 */
+		gap: 6px;
+		padding: 10px;
+		overflow-y: auto;
+	}
 
-body {
-	margin: 10px;
-	background-image: url(https://d2w9rnfcy7mm78.cloudfront.net/48191974/original_0ab86f3501306115a4a52a6ab7852ecc.jpeg?1784880675?bc=0);
-	background-size: 900px;
-	background-position-x: -10px;
-	background-position-y: 200px;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-color: white;
-}
+	/* 오른쪽: 내용 칸이 나머지 화면을 전부 덮음 (흰 배경) */
+	.viewer {
+		grid-column: 2;
+		grid-row: 1;
+		min-height: 0;
+		border-top: 0;
+		border-left: 1px solid black;  /* 나누는 선 */
+		background: white;
+	}
 
-
-.green {
-	color: black;
-	background-color: lightgreen;
-/*.
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	*/
-}
-
-.red {
-	color: black;
-	background-color: orangered;
-}
-
-.blue {
-	color: black;
-	background-color: skyblue;
-}
-
-.yellow {
-	color: black;
-	background-color: #EDFF4D;
-}
-
-.pink {
-	color: black;
-	background-color: pink;
-}
-
+	.contact {
+		grid-column: 1 / -1;
+		grid-row: 2;
+		background: white;
+	}
 }

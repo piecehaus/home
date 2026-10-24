@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
 	<meta charset="utf-8">
 	<title>welcome!</title>
@@ -12,54 +12,42 @@
 </head>
 <body>
 
+<!-- 1. 맨 위: 스케치북 줄 (화면 가로 전체에 이어서 깔림) -->
+<div class="strip"></div>
 
-<br><br>
-<p><a href="kr/index.html">Hello!</a></p>
-<!--다양한 나라의 안녕이 주루룩 나오면 좋겠다-->
+<!-- 2. 그 아래: 메뉴 줄. 누르면 아래 viewer 칸에 해당 폴더의 index.html이 열림 -->
+<nav class="menu">
+	<p><a href="./" target="_top">Hello!</a></p>
+	<!--다양한 나라의 안녕이 주루룩 나오면 좋겠다-->
 
-<br><br>
+	<p><a href="i/index.html" target="viewer">I</a></p>
 
-<p><a href="i/index.html">I</a></p>
-<br>
-<p class="blue"><a href="https://www.instagram.com/piecehausmeals/">cook</a></p>
-<br>
-<p class="red"><a href="reading/index.html">read</a></p>
-<br>
-<p class="yellow"><a href="write/index.html">write</a></p>
-<br>
-<p class="color1"><a href="https://www.youtube.com/@aptx2001" target="_blank" rel="noopener noreferrer">video</a></p>
-<br>
-<p class="color2"><a>image</a></p>
-<br>
-<p class="color3"><a>dance</a></p>
-<br>
-<p>and</p><p class="white"><a>travell</a></p>
-<br><br>
-<p>a big piece of my life...</p><br>
-<p>welcome to piece-haus.</p>
+	<!-- instagram, youtube는 iframe 안에서 안 열려서 새 탭으로 연결 -->
+	<p class="blue"><a href="https://www.instagram.com/piecehausmeals/" target="_blank" rel="noopener noreferrer">cook</a></p>
 
-<br>
+	<p class="red"><a href="reading/index.html" target="viewer">read</a></p>
 
-<p class="last">contact<br><br>kleinegeluk@naver.com<br>@xnsldbwjd<br></p>
+	<p class="yellow"><a href="write/index.html" target="viewer">write</a></p>
 
-<!-- <img class="icon" src="https://d2w9rnfcy7mm78.cloudfront.net/43743470/original_bf4431c9b963b519363c0706e6826bf6.jpg?1771513924?bc=0"> -->
+	<p class="color1"><a href="https://www.youtube.com/@aptx2001" target="_blank" rel="noopener noreferrer">video</a></p>
 
-<!-- <img src="https://images.are.na/eyJidWNrZXQiOiJhcmVuYV9pbWFnZXMiLCJrZXkiOiI0Mzk2NTgwOS9vcmlnaW5hbF9iOTcyZTZmMDE2YTNhYTU5OWM5YmE5YWI4ZDViMDZmYi5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjYwMCwiaGVpZ2h0Ijo2MDAsImZpdCI6Imluc2lkZSIsIndpdGhvdXRFbmxhcmdlbWVudCI6dHJ1ZX0sIndlYnAiOnsicXVhbGl0eSI6NzV9LCJmbGF0dGVuIjp7ImJhY2tncm91bmQiOnsiciI6MjAzLCJnIjoyMDMsImIiOjIwM319LCJqcGVnIjp7InF1YWxpdHkiOjc1fSwicm90YXRlIjpudWxsfX0="> -->
+	<p class="color2"><a>image</a></p>
 
-<!-- <img src="https://d2w9rnfcy7mm78.cloudfront.net/43798258/original_7ffb6e868d27a179c2a2de73d2eeda3b.jpg?1771669765?bc=0"> -->
+	<p class="color3"><a>dance</a></p>
 
-<!-- <img class="text" src="https://d2w9rnfcy7mm78.cloudfront.net/43606292/original_8ca8e35638edd66e27ffa1a419cc66f1.jpg?1771067458?bc=0"> -->
+	<p>and <span class="white"><a>travell</a></span></p>
+</nav>
 
-<!--
-<p>&</p>
+<!-- 3. 그 아래: 내용이 보이는 칸 (처음에는 환영 문구) -->
+<div class="viewer">
+	<iframe name="viewer" title="content"
+		srcdoc="<style>body{margin:12px;font:15px/1.8 sans-serif}</style><p>a big piece of my life...</p><p>welcome to piece-haus.</p>"></iframe>
+</div>
 
-<p class="pink"><a>you</a></p>
--->
-
-<!-- <video autoplay muted loop>
-  <source src="https://attachments.are.na/43946641/36d8e359b0ba57d0002c53712cb31a68.mov?1772117247"/>
-</video> -->
-
+<!-- 4. 맨 아래: contact -->
+<footer class="contact">
+	contact &nbsp; kleinegeluk@naver.com &nbsp; @xnsldbwjd
+</footer>
 
 </body>
 </html>
